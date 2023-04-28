@@ -45,7 +45,7 @@ menu_scroll_x = 0
 channel = pg.mixer.Channel(0)
 channel.set_volume(0.1)
 
-SwipeFoto = import_foto("Assets\SwipeFoto.png",30,30)
+SwipeFoto = import_foto("Assets/SwipeFoto.png",30,30)
 pg.display.set_caption("Swipe! v.1.4")
 pg.display.set_icon(SwipeFoto)
 deltaTime = 0
@@ -94,7 +94,7 @@ clock = pg.time.Clock()
 
 schermheightx, schermheighty = pg.display.get_surface().get_size()
 
-datafiles = np.genfromtxt('Assets\datafile.txt',dtype='int',delimiter=' ')
+datafiles = np.genfromtxt('Assets/datafile.txt',dtype='int',delimiter=' ')
 for index in range(len(datafiles)):
     if int(datafiles[index]) > -1:
         if index == 0:
@@ -539,7 +539,7 @@ while spelen:
     schermheightx, schermheighty = pg.display.get_surface().get_size()
 
 #save file
-datafile = open('Assets\datafile.txt','w')
+datafile = open('Assets/datafile.txt','w')
 if particles:
     particles = 1
 else:
