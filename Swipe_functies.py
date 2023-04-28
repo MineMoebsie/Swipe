@@ -365,7 +365,7 @@ def gebruiker_input_menu(event_rij, menu_aan, spelen, geselecteerd_level, level,
         if e.type == pg.QUIT:
             spelen = False
         if e.type == pg.VIDEORESIZE:
-            schermblit = pg.display.set_mode(e.size,pg.RESIZABLE|pg.DOUBLEBUF)
+            schermblit = pg.display.set_mode(e.size,pg.RESIZABLE|pg.DOUBLEBUF|pg.SCALED, vsync=1)
         if e.type == pg.KEYDOWN:
             if e.key == pg.K_ESCAPE:
                 pg.event.pump()
@@ -506,7 +506,7 @@ def gebruiker_input(event_rij, richting, schermblit, showtime, bounce_point):
         if e.type == pg.QUIT:
             menu_aan = True
         if e.type == pg.VIDEORESIZE:
-            schermblit = pg.display.set_mode(e.size,pg.RESIZABLE|pg.DOUBLEBUF)
+            schermblit = pg.display.set_mode(e.size,pg.RESIZABLE|pg.DOUBLEBUF|pg.SCALED, vsync=1)
         if e.type == pg.KEYDOWN:
             if e.key == pg.K_ESCAPE:
                 pg.event.pump()
